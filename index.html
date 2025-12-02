@@ -1,1 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah Kimia & Atom: Kronik Vintage Sains</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Variabel Warna */
+        :root {
+            --vintage-bg: #f5f5dc; /* Beige / Krem Muda */
+            --vintage-text: #5c4033; /* Cokelat Tua */
+            --vintage-accent: #a0522d; /* Sienna */
+            --vintage-border: #8b4513; /* Saddle Brown */
+            --vintage-button-bg: #8b4513;
+            --vintage-button-text: #f5f5dc;
+        }
 
+        /* Gaya Dasar */
+        body {
+            background-color: var(--vintage-bg);
+            color: var(--vintage-text);
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+        }
+
+        /* Kontainer Utama */
+        .vintage-container {
+            max-width: 960px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 40px;
+            border: 6px double var(--vintage-border);
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        /* Heading */
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: var(--vintage-accent);
+            text-align: center;
+            border-bottom: 2px dashed var(--vintage-border);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Kartu Konten */
+        .vintage-card {
+            background-color: #fffaf0;
+            border: 1px solid var(--vintage-border);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .vintage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Garis Waktu */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid var(--vintage-accent);
+            margin-bottom: 25px;
+        }
+
+        .timeline-item::before {
+            content: '♦';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            color: var(--vintage-accent);
+            font-size: 1.2em;
+            line-height: 1;
+        }
+        
+        /* Tombol Vintage */
+        .btn-vintage {
+            background-color: var(--vintage-button-bg);
+            color: var(--vintage-button-text);
+            border: 2px solid var(--vintage-accent);
+            border-radius: 0;
+            padding: 8px 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .btn-vintage:hover {
+            background-color: var(--vintage-accent);
+            color: white;
+            border-color: var(--vintage-border);
+        }
+
+        /* Footer */
+        .vintage-footer {
+            background-color: var(--vintage-border);
+            color: var(--vintage-bg);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 5px solid var(--vintage-accent);
+        }
+        
+        /* Gaya Gambar dengan Bingkai */
+        .vintage-img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid var(--vintage-accent);
+            padding: 5px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color: white;
+            display: block; /* Agar center bekerja */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: var(--vintage-border);">
+        <div class="container">
+            <a class="navbar-brand" href="#home" style="color: var(--vintage-bg); font-weight: bold;">🔬 Kronik Sains Abad Klasik</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#pionir" style="color: var(--vintage-bg);">Pionir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#atom" style="color: var(--vintage-bg);">Model Atom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#konsep" style="color: var(--vintage-bg);">Konsep Kunci</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container vintage-container">
+        
+        <a id="home"></a>
+        <h1>📜 Sejarah Kimia dan Struktur Atom</h1>
+        
+        <p class="lead text-center">Menjelajahi arsip penemuan yang membentuk ilmu pengetahuan modern tentang materi.</p>
+        
+        <div class="text-center mb-5">
+            <a href="#pionir" class="btn btn-vintage mx-2">Para Penemu</a>
+            <a href="#atom" class="btn btn-vintage mx-2">Garis Waktu Atom</a>
+            <a href="#konsep" class="btn btn-vintage mx-2">Konsep Dasar</a>
+        </div>
+        
+        <hr>
+
+        <a id="pionir"></a>
+        <section class="mt-5">
+            <h2>🥇 Para Pionir Kimia dan Fisika</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="vintage-card">
+                        <h4>Antoine Lavoisier (1743–1794)</h4>
+                        <p>Bapak Kimia Modern. Merumuskan **Hukum Kekekalan Massa**. Karyanya mengubah kimia menjadi ilmu kuantitatif.</p>
+                        <p class="small text-end"><em>Revolusi Kimia.</em></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="vintage-card">
+                        <h4>Dmitri Mendeleev (1834–1907)</h4>
+                        <p>Penemu **Tabel Periodik Unsur** (1869). Ia mengelompokkan unsur dan berani memprediksi sifat-sifat unsur yang belum ditemukan.</p>
+                        <p class="small text-end"><em>Keteraturan alam semesta.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                 <div class="col-md-6">
+                    <div class="vintage-card">
+                        <h4>Marie Curie (1867–1934)</h4>
+                        <p>Peneliti pionir di bidang **radioaktivitas**. Penemu Polonium dan Radium. Peraih dua Hadiah Nobel.</p>
+                        <p class="small text-end"><em>Keajaiban materi yang memancarkan cahaya.</em></p>
+                    </div>
+                </div>
+
+                 <div class="col-md-6">
+                    <div class="vintage-card">
+                        <h4>Robert Boyle (1627–1691)</h4>
+                        <p>Salah satu pendiri kimia modern. Ia mendefinisikan **unsur** dan merumuskan **Hukum Boyle** tentang gas.</p>
+                        <p class="small text-end"><em>"The Sceptical Chymist."</em></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <hr>
+
+        <a id="atom"></a>
+        <section class="mt-5">
+            <h2>⏳ Garis Waktu Perkembangan Model Atom</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="timeline-item">
+                        <strong>1803: John Dalton</strong>
+                        <p>Model Atom Bola Pejal: Atom adalah partikel kecil, keras, dan tidak dapat dibagi.</p>
+                        <div class="text-center">
+                            <img src="https://via.placeholder.com/200x150?text=Model+Dalton+(Bola+Pejal)" class="vintage-img" alt="Diagram Model Atom Bola Pejal Dalton">
+                            <small class="text-muted d-block mt-2">Model awal atom Dalton (bola pejal).</small>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <strong>1897: J.J. Thomson</strong>
+                        <p>Model Puding Kismis (**Plum Pudding Model**): Penemuan **Elektron**. Atom sebagai massa positif dengan elektron negatif tertanam di dalamnya.</p>
+                        <div class="text-center"><small class="text-muted d-block mt-2">Diagram Model Puding Kismis Thomson.</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="timeline-item">
+                        <strong>1911: Ernest Rutherford</strong>
+                        <p>Model Atom Nuklir: Hasil dari Percobaan Lembaran Emas. Menemukan **Inti Atom** (nukleus) yang bermuatan positif di pusat atom.</p>
+                        <div class="text-center"><small class="text-muted d-block mt-2">Ilustrasi Percobaan Lembaran Emas dan Model Nuklir Rutherford.</small>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <strong>1913: Niels Bohr</strong>
+                        <p>Model Atom Bohr: Elektron bergerak mengelilingi inti dalam **lintasan (orbit) tertentu** dengan tingkat energi kuantitas.</p>
+                        <div class="text-center"><small class="text-muted d-block mt-2">Visualisasi Model Atom Bohr (shell elektron).</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <hr>
+
+        <a id="konsep"></a>
+        <section class="mt-5">
+            <h2>🔑 Konsep Kunci dalam Kimia Klasik</h2>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="vintage-card text-center">
+                        <h4>Massa Atom</h4>
+                        <p>Ukuran massa suatu atom. Konsep fundamental sejak Teori Atom Dalton.</p>
+                        <button class="btn btn-sm btn-vintage">Pelajari Lebih Lanjut</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vintage-card text-center">
+                        <h4>Stoikiometri</h4>
+                        <p>Hubungan kuantitatif antara reaktan dan produk dalam reaksi kimia.</p>
+                        <button class="btn btn-sm btn-vintage">Lihat Contoh</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vintage-card text-center">
+                        <h4>Hukum Periodik</h4>
+                        <p>Sifat-sifat unsur adalah fungsi periodik dari nomor atomnya.</p>
+                        <button class="btn btn-sm btn-vintage">Akses Tabel</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="page-section" id="galeri" style="background-color: var(--light-bg);">
+    <div class="container">
+        <h2 class="text-center mb-5">TOKOH CHEMISTRY</h2>
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="vintage-card text-center">
+                        <h4>DALTON</h4>
+                        <img src="dalton.jpeg" height="200px" width="300px" class="card-img-top card-img-vintage">
+                        <button class="btn btn-sm btn-vintage">Pelajari Lebih Lanjut</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vintage-card text-center">
+                        <h4>LAVOISIER</h4>
+                        <img src="L.jpg" height="200px" width="300px" class="card-img-top card-img-vintage">
+                        <button class="btn btn-sm btn-vintage">Pelajari Lebih Lanjut</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vintage-card text-center">
+                        <h4>ROBERT BOYLE</h4>
+                        <img src="p.jpg" height="200px" width="300px" class="card-img-top card-img-vintage">
+                        <button class="btn btn-sm btn-vintage">Pelajari Lebih Lanjut</button>
+                    </div>
+                </div>
+            </div>
+
+                         
+                    
+                    </div>
+                </div>
+            </div>
+            
+</section>
+<audio id="background-music" controls loop style="display: block; margin: 20px auto; width: 300px;">
+    <source src="Likybo - Kraazy (Official Video).mp3" type="audio/mpeg">
+    <source src="Likybo - Kraazy (Official Video).mp3" type="audio/ogg">
+</audio>
+
+    
+</div>
+</div>
+
+    <footer class="vintage-footer">
+        <p>&copy; 2025 Nadia Indriyani | SALAM CHEMISTRY</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
